@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('background.jpg'); /* Ganti 'background.jpg' dengan path ke file background yang diinginkan */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang dengan transparansi */
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Efek bayangan (shadow) pada container */
+    }
+
+    #profile-pic {
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 5px solid #fff; /* Border putih sekeliling foto */
+    }
+
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .skills {
+      text-align: left;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      display: inline-block;
+      background-color: #fff; /* Warna latar belakang untuk setiap keahlian */
+      color: #333; /* Warna teks untuk setiap keahlian */
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="profile-pic" src="profile.jpg" alt="Profile Picture">
+
+    <h1>Magen Tengker</h1>
+    <h2>Mahasiswa</h2>
+
+    <p>
+      Hello, saya Magen Tengker, seorang mahasiswa di UNKLAB.
+    </p>
+
+    <div class="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list" id="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>basicJavaScript</li>
+        <li>c++</li>
+        <li>blender3d</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // Menambahkan efek hover pada keahlian
+    const skillsList = document.getElementById('skills-list');
+    const skillsItems = skillsList.getElementsByTagName('li');
+
+    for (const item of skillsItems) {
+      item.addEventListener('mouseover', function() {
+        this.style.backgroundColor = '#333';  // Ganti warna latar belakang saat di-hover
+        this.style.color = '#fff';  // Ganti warna teks saat di-hover
+      });
+
+      item.addEventListener('mouseout', function() {
+        this.style.backgroundColor = '#fff';  // Kembalikan warna latar belakang setelah tidak di-hover
+        this.style.color = '#333';  // Kembalikan warna teks setelah tidak di-hover
+      });
+    }
+  </script>
+</body>
+</html>
